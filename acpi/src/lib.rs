@@ -157,6 +157,11 @@ impl Acpi {
     pub fn interrupt_model<'a>(&'a self) -> &'a Option<InterruptModel> {
         &self.interrupt_model
     }
+
+    // The HPET configuration for this system, if supported.
+    pub fn hpet(&self) -> &Option<HpetInfo> {
+        &self.hpet
+    }
 }
 
 /// This is the entry point of `acpi` if you have the **physical** address of the RSDP. It maps
