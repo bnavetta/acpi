@@ -14,13 +14,13 @@ pub enum PageProtection {
 /// Information about the High Precision Event Timer
 #[derive(Debug)]
 pub struct HpetInfo {
-    event_timer_block_id: u32,
-    base_address: usize,
-    hpet_number: u8,
+    pub event_timer_block_id: u32,
+    pub base_address: usize,
+    pub hpet_number: u8,
     /// The minimum number of clock ticks that can be set without losing interrupts (for timers in
     /// Periodic Mode)
-    clock_tick_unit: u16,
-    page_protection: PageProtection,
+    pub clock_tick_unit: u16,
+    pub page_protection: PageProtection,
 }
 
 #[repr(C, packed)]
